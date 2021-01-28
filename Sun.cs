@@ -5,7 +5,7 @@ using UnityEngine;
 public class Sun : MonoBehaviour
 {    
     // the first try of night and day selection script.
-    public float speed = 200f;
+    public float speed = 0.8f;
     void Update()
     {
         transform.RotateAround(Vector3.zero, Vector3.right, speed * Time.deltaTime);

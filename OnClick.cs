@@ -5,10 +5,9 @@ using UnityEngine;
 public class OnClick : MonoBehaviour
 {    
     public GameObject GOBJ;
-
-    void OnMouseDown()
+>
+    void Update()
     {
-        Destroy(GOBJ);
+        if(Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject()) {
     }
-
 }

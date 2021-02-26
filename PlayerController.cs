@@ -14,29 +14,25 @@ public class PlayerController : MonoBehaviour {
         void Update() {
             Rigidbody rigidbody = GetComponent<Rigidbody>();
 
+            if(Input.GetKey("shift")) 
+            {
+                MoveSpeed == SprintSpeed; 
+            }
+
             if(Input.GetKey(W)) {
                 transform.position += Vector3.forward * Time.deltaTime * MoveSpeed;
-                if(Input.GetKey("shift")) {
-                    MoveSpeed == SprintSpeed;
-                }
             }
+            
             else if(Input.GetKey(S)) {
                 rigidbody.position += Vector3.back * Time.deltaTime * MoveSpeed;
-                if(Input.GetKey("shift")) {
-                    MoveSpeed == SprintSpeed;
-                }
             }
+            
             else if(Input.GetKey(A)) {
                 rigidbody.position += Vector3.left * Time.deltaTime * MoveSpeed;
-                if(Input.GetKey("shift")) {
-                    MoveSpeed == SprintSpeed;
-                }
             }
+            
             else if(Input.GetKey(D)) {
                 rigidbody.position += Vector3.right * Time.deltaTime * MoveSpeed;
-                if(Input.GetKey("shift")) {
-                    MoveSpeed == SprintSpeed;  
-                }
             }      
         }
     }

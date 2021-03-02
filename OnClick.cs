@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class OnClick : MonoBehaviour
 {    
-    public GameObject GOBJ;
+    public Animation anim;
 
     void Update()
     {
         if(Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject()) {
+            anim.Play();
     }
 }
